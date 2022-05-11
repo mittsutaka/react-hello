@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app:cached
+    command: sh -c "cd app && yarn start"
+    ports:
+      - "3000:3000"
